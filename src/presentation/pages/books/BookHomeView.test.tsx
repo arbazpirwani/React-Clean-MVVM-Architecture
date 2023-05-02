@@ -21,27 +21,31 @@
  *
  */
 
-import NetworkApi from "./NetworkApi";
-import {Response} from "../api/Response";
-import {ApiService} from "../api/ApiService";
-import {API_ENDPOINTS} from "../constant/ApiConstants";
-import {BookApiEntity, BookItemApiEntity} from "../entity/interfaces/BookApiEntityInterfaces";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import BookHomeView from "./BookHomeView";
+import * as BookHomeViewModel from "./BookHomeViewModel";
 
-export default class NetworkApiImpl implements NetworkApi {
+jest.mock("./BookHomeViewModel");
 
-    apiService: ApiService
+describe("BookHomeView", () => {
+    it("renders the book list and search input", async () => {
+        const mockGetGoogleBooksByQuery = jest.fn();
+        (BookHomeViewModel as any).useBookHomeViewModel.mockReturnValue({
+            books: null,
+            getGoogleBooksByQuery: mockGetGoogleBooksByQuery,
+        });
 
-    constructor(apiService: ApiService) {
-        this.apiService = apiService
-    }
+        render(<BookHomeView />);
 
-    getBooksByQuery(query: string): Promise<Response<BookApiEntity>> {
-        return this.apiService.get<BookApiEntity>(`${API_ENDPOINTS.VOLUME}/?q=${query}`)
-    }
+        expect(screen.getByPlaceholderText("Search books")).toBeInTheDocument();
+        fireEvent.change(screen.getByPlaceholderText("Search books"), {
+            target: { value: "React" },
+        });
 
-    getBookById(id: string): Promise<Response<BookItemApiEntity>> {
-        return this.apiService.get<BookItemApiEntity>(`${API_ENDPOINTS.VOLUME}/${id}`)
-    }
+        await waitFor(() => {
+            expect(mockGetGoogleBooksByQuery).toHaveBeenCalledWith("React");
+        });
+    });
 
-
-}
+    // Add more test cases for different scenarios, e.g., loading, error, success, and logout.
+});

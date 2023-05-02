@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# React Clean MVVM Architecture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an implementation of a clean and maintainable React application based on the MVVM (Model-View-ViewModel) architectural pattern. It demonstrates best practices such as the SOLID principles, object calisthenics, clean architecture, and clean code. The project aims to provide a solid foundation for building scalable and maintainable React applications, serving as a helpful resource for the community.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The project is organized into different layers, each with its own responsibility, ensuring a clear separation of concerns. The main layers of the architecture are:
 
-### `npm start`
+- Core: Contains utility classes and reusable components.
+- Data: Handles API interactions, network communication, and data transformations.
+- Domain: Contains the business logic, use cases, and entity models.
+- Presentation: Manages UI components, state management, and dependency injection.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Structure
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+src/
+│
+├─ core/ 
+│   └─ utils/ 
+│
+├─ data/ 
+│   ├─ api/ 
+│   ├─ constant/ 
+│   ├─ entity/ 
+│   ├─ network/ 
+│   └─ repository/ 
+│
+├─ domain/ 
+│   ├─ model/ 
+│   ├─ repository/ 
+│   └─ usecase/ 
+│       └─ book/ 
+│
+└─ presentation/ 
+    ├─ di/ 
+    ├─ pages/ 
+    └─ routes/ 
+```
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to set up and run the project on your local machine:
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v12 or higher)
+- npm (v6 or higher)
+- Git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+   ```
+   git clone https://github.com/your_username/React-Clean-MVVM-Architecture.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Change into the project directory:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
+   cd React-Clean-MVVM-Architecture
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Install the dependencies:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```
+   npm install
+   ```
 
-## Learn More
+4. Run the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   The application should now be running on `http://localhost:3000`.
+
+## Contributing
+
+We welcome contributions from the community to improve this project. To contribute, please follow these steps:
+
+1. Fork the project repository.
+2. Create a new feature branch from the `main` branch.
+3. Make your changes and commit them with a clear and descriptive commit message.
+4. Push your changes to the feature branch on your fork.
+5. Open a pull request targeting the `main` branch in the original repository.
+
+Please make sure to read and follow the [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

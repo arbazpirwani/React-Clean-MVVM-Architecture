@@ -21,27 +21,11 @@
  *
  */
 
-import NetworkApi from "./NetworkApi";
-import {Response} from "../api/Response";
-import {ApiService} from "../api/ApiService";
-import {API_ENDPOINTS} from "../constant/ApiConstants";
-import {BookApiEntity, BookItemApiEntity} from "../entity/interfaces/BookApiEntityInterfaces";
+const TYPES = {
+    NetworkApi: Symbol.for('NetworkApi'),
+    BookRepository: Symbol.for('BookRepository'),
+    GetBooksByQueryUseCase: Symbol.for('GetBooksByQueryUseCase'),
+    GetBookByIdUseCase: Symbol.for('GetBookByIdUseCase'),
+};
 
-export default class NetworkApiImpl implements NetworkApi {
-
-    apiService: ApiService
-
-    constructor(apiService: ApiService) {
-        this.apiService = apiService
-    }
-
-    getBooksByQuery(query: string): Promise<Response<BookApiEntity>> {
-        return this.apiService.get<BookApiEntity>(`${API_ENDPOINTS.VOLUME}/?q=${query}`)
-    }
-
-    getBookById(id: string): Promise<Response<BookItemApiEntity>> {
-        return this.apiService.get<BookItemApiEntity>(`${API_ENDPOINTS.VOLUME}/${id}`)
-    }
-
-
-}
+export default TYPES;

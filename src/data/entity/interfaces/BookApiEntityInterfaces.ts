@@ -21,27 +21,41 @@
  *
  */
 
-import NetworkApi from "./NetworkApi";
-import {Response} from "../api/Response";
-import {ApiService} from "../api/ApiService";
-import {API_ENDPOINTS} from "../constant/ApiConstants";
-import {BookApiEntity, BookItemApiEntity} from "../entity/interfaces/BookApiEntityInterfaces";
+export interface GoogleBookVolumeInfo {
+    id: string;
+    title: string;
+    subtitle: string;
+    authors?: string[];
+    publisher?: string;
+    publishedDate?: string;
+    description?: string;
+    pageCount?: number;
+    printType?: string;
+    imageLinks?: {
+        extraLarge?: string;
+        large?: string;
+        medium?: string;
+        small?: string;
+        thumbnail?: string;
+        smallThumbnail?: string;
+    };
+    maturityRating?: string;
+    allowAnonLogging?: boolean;
+    contentVersion?: string;
+    language?: string;
+    previewLink?: string;
+    infoLink?: string;
+    canonicalVolumeLink?: string;
 
-export default class NetworkApiImpl implements NetworkApi {
+}
 
-    apiService: ApiService
+export interface BookItemApiEntity {
+    id: string;
+    kind: string;
+    etag: string;
+    volumeInfo: GoogleBookVolumeInfo;
+}
 
-    constructor(apiService: ApiService) {
-        this.apiService = apiService
-    }
-
-    getBooksByQuery(query: string): Promise<Response<BookApiEntity>> {
-        return this.apiService.get<BookApiEntity>(`${API_ENDPOINTS.VOLUME}/?q=${query}`)
-    }
-
-    getBookById(id: string): Promise<Response<BookItemApiEntity>> {
-        return this.apiService.get<BookItemApiEntity>(`${API_ENDPOINTS.VOLUME}/${id}`)
-    }
-
-
+export interface BookApiEntity {
+    items: BookItemApiEntity[];
 }
