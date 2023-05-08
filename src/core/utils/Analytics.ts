@@ -28,9 +28,10 @@ class MixpanelLogger {
         if (typeof window !== 'undefined') {
             // mixpanel.track(eventName, properties);
             console.log(`Mixpanel event: ${eventName}`, properties);
-        } else {
-            console.log(`Mixpanel event: ${eventName}`, properties);
+            return
         }
+        console.log(`Mixpanel event: ${eventName}`, properties);
+
     }
 }
 
@@ -41,9 +42,9 @@ class FacebookEventLogger {
         if (typeof window !== 'undefined') {
             // facebook.track(eventName, properties);
             console.log(`Facebook event: ${eventName}`, properties);
-        } else {
-            console.log(`Facebook event: ${eventName}`, properties);
+            return
         }
+        console.log(`Facebook event: ${eventName}`, properties);
     }
 }
 

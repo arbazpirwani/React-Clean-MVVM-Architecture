@@ -45,9 +45,9 @@ export class GetBookById implements GetBookByIdUseCase {
                     responseState: State.Success,
                     data: fromAPIEntityToDomainItem(response.body!)
                 }
-            } else {
-                return {responseState: State.Fail, error: response.errorBody!}
             }
+            return {responseState: State.Fail, error: response.errorBody!}
+
         } catch (error) {
             return {responseState: State.Error}
 

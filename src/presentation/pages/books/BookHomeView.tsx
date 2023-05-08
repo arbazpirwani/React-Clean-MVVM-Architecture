@@ -46,23 +46,25 @@ export default function BookHomeView() {
     useEffect(() => {
         if (!books) {
             getGoogleBooksByQuery(query);
-        } else {
-            switch (books.responseState) {
-                case State.Loading:
-                    setShouldShowProgress(true);
-                    break;
-                case State.Success:
-                    setShouldShowProgress(false);
-                    setShouldShowError(false);
-                    setBookList(books.data!);
-                    break;
-                case State.Fail:
-                    setShouldShowProgress(false);
-                    setShouldShowError(true);
-                    setErrorMessage(books.error?.message || null);
-                    break;
-            }
+            return
         }
+
+        switch (books.responseState) {
+            case State.Loading:
+                setShouldShowProgress(true);
+                break;
+            case State.Success:
+                setShouldShowProgress(false);
+                setShouldShowError(false);
+                setBookList(books.data!);
+                break;
+            case State.Fail:
+                setShouldShowProgress(false);
+                setShouldShowError(true);
+                setErrorMessage(books.error?.message || null);
+                break;
+        }
+
     }, [books, getGoogleBooksByQuery, query]);
 
     function onSearchItemChange(event: React.ChangeEvent<HTMLInputElement>) {

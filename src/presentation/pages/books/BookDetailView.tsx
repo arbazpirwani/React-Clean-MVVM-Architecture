@@ -46,23 +46,24 @@ export default function BookDetailView() {
     useEffect(() => {
         if (!book) {
             getBookById(id!);
-        } else {
-            switch (book.responseState) {
-                case State.Loading:
-                    setShouldShowProgress(true);
-                    break;
-                case State.Success:
-                    setShouldShowProgress(false);
-                    setShouldShowError(false);
-                    setSelectedBook(book.data!);
-                    break;
-                case State.Fail:
-                    setShouldShowProgress(false);
-                    setShouldShowError(true);
-                    setErrorMessage(book.error?.message || null);
-                    break;
-            }
+            return
         }
+        switch (book.responseState) {
+            case State.Loading:
+                setShouldShowProgress(true);
+                break;
+            case State.Success:
+                setShouldShowProgress(false);
+                setShouldShowError(false);
+                setSelectedBook(book.data!);
+                break;
+            case State.Fail:
+                setShouldShowProgress(false);
+                setShouldShowError(true);
+                setErrorMessage(book.error?.message || null);
+                break;
+        }
+
     }, [book, getBookById, id]);
 
     return (

@@ -51,10 +51,11 @@ export class ApiService {
                     return {
                         isSuccessful: false, errorBody: {
                             statusCode: error.response.status,
-                            message:error.message
+                            message: error.message
                         }
                     }
-                } else if (error.request) {
+                }
+                if (error.request) {
                     return {
                         isSuccessful: false,
                         errorBody: {
@@ -62,12 +63,11 @@ export class ApiService {
                             message: error.message
                         }
                     };
-                } else {
-                    return {isSuccessful: false, errorBody: {statusCode: 0, message: error.message}};
                 }
-            } else {
-                return {isSuccessful: false, errorBody: {statusCode: 300, message: "Unexpected"}};
+                return {isSuccessful: false, errorBody: {statusCode: 0, message: error.message}};
             }
+            return {isSuccessful: false, errorBody: {statusCode: 300, message: "Unexpected"}};
+
 
         }
     }

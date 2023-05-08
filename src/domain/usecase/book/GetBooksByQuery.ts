@@ -45,9 +45,9 @@ export class GetBooksByQuery implements GetBooksByQueryUseCase {
                     responseState: State.Success,
                     data: fromAPIEntityToDomain(response.body!)
                 }
-            } else {
-                return {responseState: State.Fail, error: response.errorBody!}
             }
+            return {responseState: State.Fail, error: response.errorBody!}
+
         } catch (error) {
             console.log(error)
             return {responseState: State.Error}

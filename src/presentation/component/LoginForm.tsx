@@ -40,11 +40,11 @@ function LoginForm({onSubmit}: LoginFormProps) {
     let email = useRef("");
     let password = useRef("");
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        email.current  = event.target.value
+        email.current = event.target.value
     };
 
     const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        password.current =  event.target.value
+        password.current = event.target.value
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -52,9 +52,10 @@ function LoginForm({onSubmit}: LoginFormProps) {
         const errors = validateInputs();
         if (Object.keys(errors).length > 0) {
             setErrors(errors);
-        } else {
-            onSubmit(email.current, password.current);
+            return
         }
+        onSubmit(email.current, password.current);
+
     };
 
 
@@ -109,8 +110,8 @@ function LoginForm({onSubmit}: LoginFormProps) {
                 Sign In
             </Button>
             <Grid container>
-                <Grid item xs><Link href="login#" variant="body2">Forgot password?</Link></Grid>
-                <Grid item><Link href="login#" variant="body2">{"Don't have an account? Sign Up"}</Link></Grid>
+                <Grid item xs><Link href="#" variant="body2">Forgot password?</Link></Grid>
+                <Grid item><Link href="#" variant="body2">{"Don't have an account? Sign Up"}</Link></Grid>
             </Grid>
         </Box>
 
