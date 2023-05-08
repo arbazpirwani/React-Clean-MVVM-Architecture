@@ -23,7 +23,7 @@
 
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import BookHomeView from "presentation/pages/books/BookHomeView";
-import * as BookHomeViewModel from "presentation/pages/books/BookHomeViewModel";
+import * as BookHomeViewModel from "presentation/pages/books/UseBookHomeViewModel";
 
 jest.mock('./BookHomeViewModel');
 

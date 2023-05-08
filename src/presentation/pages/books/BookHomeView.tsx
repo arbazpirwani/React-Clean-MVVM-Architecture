@@ -22,7 +22,7 @@
  */
 
 import React, {useEffect, useState} from "react";
-import BookHomeViewModel from "presentation/pages/books/BookHomeViewModel";
+import useBookHomeViewModel from "presentation/pages/books/UseBookHomeViewModel";
 import {State} from "domain/model/ResponseState";
 import {AlertTitle, Divider, LinearProgress,} from "@mui/material";
 import Alert from "@mui/material/Alert";
@@ -35,7 +35,7 @@ import SharedPreferences from "core/utils/SharedPreferences";
 
 export default function BookHomeView() {
 
-    const {books, getGoogleBooksByQuery} = BookHomeViewModel();
+    const {books, getGoogleBooksByQuery} = useBookHomeViewModel();
     const [query] = useState('Typescript React');
 
     const [bookList, setBookList] = useState<GoogleBook[] | null>(null);

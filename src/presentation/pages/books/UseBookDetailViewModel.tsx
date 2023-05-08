@@ -26,7 +26,7 @@ import {ResponseState, State} from "domain/model/ResponseState";
 import {GoogleBook} from "domain/model/GoogleBook";
 import {GetBookByIdUseCase} from "domain/usecase/book/GetBookById";
 
-export default function BookDetailViewModel(getBookByIdUseCase: GetBookByIdUseCase) {
+export default function useBookDetailViewModel(getBookByIdUseCase: GetBookByIdUseCase) {
     const [book, setBook] = useState<ResponseState<GoogleBook>>();
 
     function getBookById(id: string) {

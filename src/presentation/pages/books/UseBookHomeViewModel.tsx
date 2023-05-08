@@ -27,7 +27,7 @@ import {GoogleBook} from 'domain/model/GoogleBook';
 import debounce from "lodash/debounce";
 import {provideGetBooksByQueryUseCase} from "presentation/di/BookModule";
 
-export default function BookHomeViewModel() {
+export default function useBookHomeViewModel() {
     const [books, setBooks] = useState<ResponseState<GoogleBook[]>>();
 
     const GetGoogleBooksByQueryUseCase = provideGetBooksByQueryUseCase()

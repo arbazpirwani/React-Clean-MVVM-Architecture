@@ -25,7 +25,7 @@ import React, {useEffect, useState} from "react";
 import {GoogleBook} from "domain/model/GoogleBook";
 import {State} from "domain/model/ResponseState";
 import BookDetail from "presentation/component/BookDetail";
-import BookDetailViewModel from "presentation/pages/books/BookDetailViewModel";
+import useBookDetailViewModel from "presentation/pages/books/UseBookDetailViewModel";
 import {useParams} from 'react-router-dom';
 import Container from "@mui/material/Container";
 import Alert from "@mui/material/Alert";
@@ -35,7 +35,7 @@ import Box from "@mui/material/Box";
 
 export default function BookDetailView() {
 
-    const {book, getBookById} = BookDetailViewModel(provideGetBookByIdUseCase());
+    const {book, getBookById} = useBookDetailViewModel(provideGetBookByIdUseCase());
 
     const {id} = useParams<{ id: string }>();
     const [selectedBook, setSelectedBook] = useState<GoogleBook | null>(null);
