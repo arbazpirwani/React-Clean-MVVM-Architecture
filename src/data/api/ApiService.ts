@@ -22,7 +22,7 @@
  */
 
 import axios, {AxiosInstance} from "axios";
-import {Response} from "./Response";
+import {Response} from "data/api/Response";
 
 interface ApiEndpoint {
     url: string;

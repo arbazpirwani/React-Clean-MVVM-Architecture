@@ -21,8 +21,8 @@
  *
  */
 
-import {Response} from "../../data/api/Response";
-import {BookApiEntity, BookItemApiEntity} from "../../data/entity/interfaces/BookApiEntityInterfaces";
+import {Response} from "data/api/Response";
+import {BookApiEntity, BookItemApiEntity} from "data/entity/interfaces/BookApiEntityInterfaces";
 
 export interface BookRepository {
 

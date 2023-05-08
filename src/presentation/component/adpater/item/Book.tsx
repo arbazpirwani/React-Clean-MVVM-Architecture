@@ -22,7 +22,7 @@
  */
 
 import {Card, CardActionArea, CardContent, CardMedia, Typography} from '@mui/material';
-import {GoogleBook} from "../../../../domain/model/GoogleBook";
+import {GoogleBook} from "domain/model/GoogleBook";
 import React from "react";
 import Box from "@mui/material/Box";
 

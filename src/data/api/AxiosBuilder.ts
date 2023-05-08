@@ -22,7 +22,7 @@
  */
 
 import axios, {AxiosRequestConfig} from "axios";
-import {ApiService} from "./ApiService";
+import {ApiService} from "data/api/ApiService";
 
 interface ApiConfig {
     baseURL: string;

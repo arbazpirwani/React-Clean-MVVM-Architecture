@@ -22,16 +22,16 @@
  */
 
 import React, {useEffect, useState} from "react";
-import BookHomeViewModel from "./BookHomeViewModel";
-import {State} from "../../../domain/model/ResponseState";
+import BookHomeViewModel from "presentation/pages/books/BookHomeViewModel";
+import {State} from "domain/model/ResponseState";
 import {AlertTitle, Divider, LinearProgress,} from "@mui/material";
 import Alert from "@mui/material/Alert";
-import {GoogleBook} from "../../../domain/model/GoogleBook";
-import BookList from "../../component/adpater/BookList";
+import {GoogleBook} from "domain/model/GoogleBook";
+import BookList from "presentation/component/adpater/BookList";
 import Container from "@mui/material/Container";
-import SearchInput from "../../component/SearchInput";
+import SearchInput from "presentation/component/SearchInput";
 import Button from "@mui/material/Button";
-import SharedPreferences from "../../../core/utils/SharedPreferences";
+import SharedPreferences from "core/utils/SharedPreferences";
 
 export default function BookHomeView() {
 

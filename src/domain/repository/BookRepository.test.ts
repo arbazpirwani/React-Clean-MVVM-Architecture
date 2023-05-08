@@ -21,7 +21,7 @@
  *
  */
 
-import {BookRepository} from './BookRepository';
+import {BookRepository} from 'domain/repository/BookRepository';
 
 describe('BookRepository', () => {
     let bookRepository: BookRepository;

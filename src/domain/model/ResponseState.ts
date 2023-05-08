@@ -21,7 +21,7 @@
  *
  */
 
-import {ErrorResponse} from "../../data/api/ErrorResponse";
+import {ErrorResponse} from "data/api/ErrorResponse";
 
 export enum State {
     Loading,

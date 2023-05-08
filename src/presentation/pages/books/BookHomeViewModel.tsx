@@ -22,10 +22,10 @@
  */
 
 import React, {useState} from "react";
-import {ResponseState, State} from "../../../domain/model/ResponseState";
-import {GoogleBook} from "../../../domain/model/GoogleBook";
+import {ResponseState, State} from "domain/model/ResponseState";
+import {GoogleBook} from 'domain/model/GoogleBook';
 import debounce from "lodash/debounce";
-import {provideGetBooksByQueryUseCase} from "../../di/BookModule";
+import {provideGetBooksByQueryUseCase} from "presentation/di/BookModule";
 
 export default function BookHomeViewModel() {
     const [books, setBooks] = useState<ResponseState<GoogleBook[]>>();

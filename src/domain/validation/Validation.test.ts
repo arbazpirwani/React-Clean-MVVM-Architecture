@@ -21,7 +21,7 @@
  *
  */
 
-import {Validation} from "./Validation";
+import {Validation} from "domain/validation/Validation";
 
 describe('Validation', () => {
     describe('validateEmail', () => {

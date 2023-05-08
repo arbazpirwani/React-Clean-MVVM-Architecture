@@ -21,10 +21,10 @@
  *
  */
 
-import {BookRepository} from "../../domain/repository/BookRepository";
-import NetworkApi from "../network/NetworkApi";
-import {Response} from "../api/Response";
-import {BookApiEntity, BookItemApiEntity} from "../entity/interfaces/BookApiEntityInterfaces";
+import {BookRepository} from "domain/repository/BookRepository";
+import NetworkApi from "data/network/NetworkApi";
+import {Response} from "data/api/Response";
+import {BookApiEntity, BookItemApiEntity} from "data/entity/interfaces/BookApiEntityInterfaces";
 
 export class GoogleBookRepositoryImpl implements BookRepository {
     apiService: NetworkApi;

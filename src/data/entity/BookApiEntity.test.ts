@@ -25,12 +25,12 @@ import {
     availableImageLink,
     fromAPIEntityToDomain,
     fromAPIEntityToDomainItem
-} from './BookApiEntity';
+} from 'data/entity/BookApiEntity';
 import {
     BookApiEntity,
     BookItemApiEntity
-} from './interfaces/BookApiEntityInterfaces'
-import {bookItemApiEntity} from "../../core/fixtures/BookFixtures";
+} from 'data/entity/interfaces/BookApiEntityInterfaces'
+import {bookItemApiEntity} from "core/fixtures/BookFixtures";
 
 
 describe('bookUtils', () => {

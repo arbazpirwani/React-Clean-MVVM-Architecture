@@ -21,7 +21,7 @@
  *
  */
 
-import {BookApiEntity, BookItemApiEntity} from "../../data/entity/interfaces/BookApiEntityInterfaces";
+import {BookApiEntity, BookItemApiEntity} from "data/entity/interfaces/BookApiEntityInterfaces";
 
 export const requestBookId = 'qtcIkAEACAAJ';
 export const requestQuery = 'Kotlin';

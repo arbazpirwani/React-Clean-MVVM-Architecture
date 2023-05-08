@@ -22,10 +22,10 @@
  */
 
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import BookHomeView from "./BookHomeView";
-import * as BookHomeViewModel from "./BookHomeViewModel";
+import BookHomeView from "presentation/pages/books/BookHomeView";
+import * as BookHomeViewModel from "presentation/pages/books/BookHomeViewModel";
 
-jest.mock("./BookHomeViewModel");
+jest.mock('./BookHomeViewModel');
 
 describe("BookHomeView", () => {
     it("renders the book list and search input", async () => {

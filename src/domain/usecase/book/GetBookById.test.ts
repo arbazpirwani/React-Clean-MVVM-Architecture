@@ -21,10 +21,10 @@
  *
  */
 
-import {GetBookById} from "./GetBookById";
-import {State} from "../../model/ResponseState";
-import {fromAPIEntityToDomainItem} from "../../../data/entity/BookApiEntity";
-import {bookItemApiEntity, requestBookId} from "../../../core/fixtures/BookFixtures";
+import {GetBookById} from "domain/usecase/book/GetBookById";
+import {State} from "domain/model/ResponseState";
+import {fromAPIEntityToDomainItem} from "data/entity/BookApiEntity";
+import {bookItemApiEntity, requestBookId} from "core/fixtures/BookFixtures";
 
 describe("GetBookById", () => {
 

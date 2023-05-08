@@ -21,8 +21,8 @@
  *
  */
 
-import {Response} from "../api/Response";
-import {BookApiEntity, BookItemApiEntity} from "../entity/interfaces/BookApiEntityInterfaces";
+import {Response} from "data/api/Response";
+import {BookApiEntity, BookItemApiEntity} from "data/entity/interfaces/BookApiEntityInterfaces";
 
 
 export default interface NetworkApi {

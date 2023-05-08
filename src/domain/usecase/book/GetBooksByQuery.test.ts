@@ -21,10 +21,10 @@
  *
  */
 
-import {State} from "../../model/ResponseState";
-import {fromAPIEntityToDomain,} from "../../../data/entity/BookApiEntity";
-import {bookApiEntity, requestQuery} from "../../../core/fixtures/BookFixtures";
-import {GetBooksByQuery, GetBooksByQueryUseCase} from "./GetBooksByQuery";
+import {State} from "domain/model/ResponseState";
+import {fromAPIEntityToDomain,} from "data/entity/BookApiEntity";
+import {bookApiEntity, requestQuery} from "core/fixtures/BookFixtures";
+import {GetBooksByQuery, GetBooksByQueryUseCase} from "domain/usecase/book/GetBooksByQuery";
 
 describe("GetBooksByQuery", () => {
 

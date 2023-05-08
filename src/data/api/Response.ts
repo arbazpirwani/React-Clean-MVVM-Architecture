@@ -21,7 +21,7 @@
  *
  */
 
-import {ErrorResponse} from "./ErrorResponse";
+import {ErrorResponse} from "data/api/ErrorResponse";
 
 export interface Response<T> {
     isSuccessful: boolean;

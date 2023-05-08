@@ -21,12 +21,12 @@
  *
  */
 
-import {GoogleBook} from "../../domain/model/GoogleBook";
+import {GoogleBook} from "domain/model/GoogleBook";
 import {
   GoogleBookVolumeInfo,
   BookItemApiEntity,
   BookApiEntity,
-} from './interfaces/BookApiEntityInterfaces';
+} from 'data/entity/interfaces/BookApiEntityInterfaces';
 
 
 export const availableImageLink = (googleBookVolumeInfo: GoogleBookVolumeInfo): string | undefined => {

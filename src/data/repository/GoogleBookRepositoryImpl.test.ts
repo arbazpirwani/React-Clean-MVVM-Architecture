@@ -21,10 +21,10 @@
  *
  */
 
-import {GoogleBookRepositoryImpl} from './GoogleBookRepositoryImpl';
-import {BookApiEntity} from '../entity/interfaces/BookApiEntityInterfaces';
-import {Response} from '../api/Response';
-import {bookItemApiEntity, requestBookId} from "../../core/fixtures/BookFixtures";
+import {GoogleBookRepositoryImpl} from 'data/repository/GoogleBookRepositoryImpl';
+import {BookApiEntity} from 'data/entity/interfaces/BookApiEntityInterfaces';
+import {Response} from 'data/api/Response';
+import {bookItemApiEntity, requestBookId} from "core/fixtures/BookFixtures";
 
 
 const testResponseSuccess = {

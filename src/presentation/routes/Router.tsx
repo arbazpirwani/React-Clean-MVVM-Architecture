@@ -22,13 +22,13 @@
  */
 
 import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
-import BookHomeView from '../pages/books/BookHomeView';
-import LoginView from '../pages/login/LoginView';
+import BookHomeView from 'presentation/pages/books/BookHomeView';
+import LoginView from 'presentation/pages/login/LoginView';
 import React, {useState} from 'react';
-import {STORAGE_KEYS} from '../../data/constant/Constants';
-import SharedPreferences from "../../core/utils/SharedPreferences";
-import {ROUTE_ENDPOINTS} from "../../data/constant/RouteConstants";
-import BookDetailView from "../pages/books/BookDetailView";
+import {STORAGE_KEYS} from 'data/constant/Constants';
+import SharedPreferences from "core/utils/SharedPreferences";
+import {ROUTE_ENDPOINTS} from "data/constant/RouteConstants";
+import BookDetailView from "presentation/pages/books/BookDetailView";
 
 export default function Router() {
     const getLoginToken = () => SharedPreferences.getString(STORAGE_KEYS.TOKEN) !== null

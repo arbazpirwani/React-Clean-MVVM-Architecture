@@ -21,10 +21,10 @@
  *
  */
 
-import {BookRepository} from "../../repository/BookRepository";
-import {fromAPIEntityToDomainItem} from "../../../data/entity/BookApiEntity";
-import {ResponseState, State} from "../../model/ResponseState";
-import {GoogleBook} from "../../model/GoogleBook";
+import {BookRepository} from "domain/repository/BookRepository";
+import {fromAPIEntityToDomainItem} from "data/entity/BookApiEntity";
+import {ResponseState, State} from "domain/model/ResponseState";
+import {GoogleBook} from "domain/model/GoogleBook";
 
 export interface GetBookByIdUseCase {
     invoke: (id: string) => Promise<ResponseState<GoogleBook>>

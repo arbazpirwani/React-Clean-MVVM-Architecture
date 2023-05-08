@@ -24,7 +24,7 @@
 import React from "react";
 import {Box, Card, CardContent, CardHeader, IconButton, Typography,} from "@mui/material";
 import {Favorite, Book} from "@mui/icons-material";
-import {GoogleBook} from "../../domain/model/GoogleBook";
+import {GoogleBook} from "domain/model/GoogleBook";
 
 interface BookDetailProps {
     book: GoogleBook | null;

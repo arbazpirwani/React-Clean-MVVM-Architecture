@@ -21,8 +21,8 @@
  *
  */
 
-import SharedPreferences from "../../../core/utils/SharedPreferences";
-import {STORAGE_KEYS} from "../../../data/constant/Constants";
+import SharedPreferences from "core/utils/SharedPreferences";
+import {STORAGE_KEYS} from "data/constant/Constants";
 
 export default function LoginViewModel() {
 

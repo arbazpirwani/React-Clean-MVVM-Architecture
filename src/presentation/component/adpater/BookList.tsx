@@ -21,10 +21,10 @@
  *
  */
 
-import {GoogleBook} from "../../../domain/model/GoogleBook";
+import {GoogleBook} from "domain/model/GoogleBook";
 import {Grid} from "@mui/material";
 import React from "react";
-import {Book} from "./item/Book";
+import {Book} from "presentation/component/adpater/item/Book";
 
 interface BookListProps {
     books: GoogleBook[] | null;

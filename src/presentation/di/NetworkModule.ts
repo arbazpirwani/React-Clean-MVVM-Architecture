@@ -21,8 +21,8 @@
  *
  */
 
-import {AxiosBuilder} from "../../data/api/AxiosBuilder";
-import {GOOGLE_API_BASE_URL} from "../../data/constant/Constants";
+import {AxiosBuilder} from "data/api/AxiosBuilder";
+import {GOOGLE_API_BASE_URL} from "data/constant/Constants";
 
 
 export function provideGoogleBooksApiBuilder() {

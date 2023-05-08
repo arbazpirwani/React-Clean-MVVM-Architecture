@@ -29,7 +29,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
-import {Validation} from "../../domain/validation/Validation";
+import {Validation} from "domain/validation/Validation";
 
 interface LoginFormProps {
     onSubmit: (email: string, password: string) => void;

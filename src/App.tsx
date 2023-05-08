@@ -21,7 +21,7 @@
  *
  */
 
-import Router from './presentation/routes/Router';
+import Router from 'presentation/routes/Router';
 
 export default function App() {
     return (

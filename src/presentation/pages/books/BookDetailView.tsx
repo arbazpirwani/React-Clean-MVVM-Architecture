@@ -22,15 +22,15 @@
  */
 
 import React, {useEffect, useState} from "react";
-import {GoogleBook} from "../../../domain/model/GoogleBook";
-import {State} from "../../../domain/model/ResponseState";
-import BookDetail from "../../component/BookDetail";
-import BookDetailViewModel from "./BookDetailViewModel";
+import {GoogleBook} from "domain/model/GoogleBook";
+import {State} from "domain/model/ResponseState";
+import BookDetail from "presentation/component/BookDetail";
+import BookDetailViewModel from "presentation/pages/books/BookDetailViewModel";
 import {useParams} from 'react-router-dom';
 import Container from "@mui/material/Container";
 import Alert from "@mui/material/Alert";
 import {AlertTitle, LinearProgress} from "@mui/material";
-import {provideGetBookByIdUseCase} from "../../di/BookModule";
+import {provideGetBookByIdUseCase} from "presentation/di/BookModule";
 import Box from "@mui/material/Box";
 
 export default function BookDetailView() {

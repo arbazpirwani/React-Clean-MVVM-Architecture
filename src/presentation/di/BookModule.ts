@@ -21,13 +21,13 @@
  *
  */
 
-import NetworkApiImpl from "../../data/network/NetworkApiImpl";
-import NetworkApi from "../../data/network/NetworkApi";
-import {GetBooksByQuery, GetBooksByQueryUseCase} from "../../domain/usecase/book/GetBooksByQuery";
-import {GoogleBookRepositoryImpl} from "../../data/repository/GoogleBookRepositoryImpl";
-import {provideGoogleBooksApiBuilder} from "./NetworkModule";
-import {BookRepository} from "../../domain/repository/BookRepository";
-import {GetBookById, GetBookByIdUseCase} from "../../domain/usecase/book/GetBookById";
+import NetworkApiImpl from "data/network/NetworkApiImpl";
+import NetworkApi from "data/network/NetworkApi";
+import {GetBooksByQuery, GetBooksByQueryUseCase} from "domain/usecase/book/GetBooksByQuery";
+import {GoogleBookRepositoryImpl} from "data/repository/GoogleBookRepositoryImpl";
+import {provideGoogleBooksApiBuilder} from "presentation/di/NetworkModule";
+import {BookRepository} from "domain/repository/BookRepository";
+import {GetBookById, GetBookByIdUseCase} from "domain/usecase/book/GetBookById";
 
 function provideNetworkApi(): NetworkApi {
     return new NetworkApiImpl(provideGoogleBooksApiBuilder())

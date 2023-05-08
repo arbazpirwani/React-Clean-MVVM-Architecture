@@ -21,11 +21,11 @@
  *
  */
 
-import NetworkApi from "./NetworkApi";
-import {Response} from "../api/Response";
-import {ApiService} from "../api/ApiService";
-import {API_ENDPOINTS} from "../constant/ApiConstants";
-import {BookApiEntity, BookItemApiEntity} from "../entity/interfaces/BookApiEntityInterfaces";
+import NetworkApi from "data/network/NetworkApi";
+import {Response} from "data/api/Response";
+import {ApiService} from "data/api/ApiService";
+import {API_ENDPOINTS} from "data/constant/ApiConstants";
+import {BookApiEntity, BookItemApiEntity} from "data/entity/interfaces/BookApiEntityInterfaces";
 
 export default class NetworkApiImpl implements NetworkApi {
 
