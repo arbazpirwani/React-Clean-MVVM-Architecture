@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ghx nick="MeshSurfaceArea" fileversion="7" kernel="0">
+  <definitions>
+    <definition name="MeshSurfaceArea" layout="0,0">
+      <!-- Input parameters -->
+      <param name="Mesh" type="Mesh" nickname="M" access="item" datatype="GH_Mesh"/>
+
+      <!-- Components -->
+      <object name="Area" nickname="A" type="Grasshopper.Kernel.Parameters.Param_Number" layout="0,1">
+        <param name="Area" nickname="A" index="0" />
+      </object>
+      
+      <!-- Connections -->
+      <wire from="M" to="A" />
+
+      <!-- Script to calculate area -->
+      <script source="Python" nickname="Script">
+        <![CDATA[
+          import Rhino.Geometry as rg
+          
+          mesh = Mesh
+          A = mesh.GetArea()
+        ]]>
+      </script>
+    </definition>
+  </definitions>
+</ghx>
